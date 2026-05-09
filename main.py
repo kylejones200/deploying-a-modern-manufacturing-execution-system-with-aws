@@ -57,7 +57,7 @@ def main():
     logging.info(f"Efficiency: {metrics['efficiency']:.2%}")
     
     logging.info(f"\nAWS Services: {', '.join(config['aws']['services'])}")
-        plot_production_trend(df, config['data']['production_column'], "Manufacturing Production Trend",
+    plot_production_trend(df, config['data']['production_column'], "Manufacturing Production Trend",
                          output_dir / 'production_trend.png')
     
     logging.info(f"\nAnalysis complete. Figures saved to {output_dir}")
