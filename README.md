@@ -28,11 +28,11 @@ Edit `config.yaml` to customize:
 ## AWS Services
 
 Common AWS services for MES:
-- **S3**: Data storage
-- **Lambda**: Serverless compute
-- **DynamoDB**: NoSQL database
-- **IoT Core**: Device connectivity
-- **Kinesis**: Real-time data streaming
+- S3: Data storage
+- Lambda: Serverless compute
+- DynamoDB: NoSQL database
+- IoT Core: Device connectivity
+- Kinesis: Real-time data streaming
 
 ## Caveats
 
