@@ -1,9 +1,7 @@
 """Core functions for deploying manufacturing execution system with AWS."""
 
-import numpy as np
 import pandas as pd
 from pathlib import Path
-from typing import Dict
 import matplotlib.pyplot as plt
 import logging
 
@@ -18,7 +16,7 @@ def analyze_manufacturing_data(df: pd.DataFrame, timestamp_col: str,
     df = df.set_index(timestamp_col)
     return df
 
-def calculate_production_metrics(df: pd.DataFrame, production_col: str) -> Dict:
+def calculate_production_metrics(df: pd.DataFrame, production_col: str) -> dict:
     """Calculate manufacturing production metrics."""
     return {
         'total_production': df[production_col].sum(),
