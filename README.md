@@ -1,5 +1,9 @@
 # Deploying a Modern Manufacturing Execution System with AWS
 
+Published: yes
+Medium: [https://medium.com/@kyle-t-jones/deploying-a-modern-manufacturing-execution-system-with-aws-7a7a90ff76f3](https://medium.com/@kyle-t-jones/deploying-a-modern-manufacturing-execution-system-with-aws-7a7a90ff76f3)
+
+
 This project demonstrates deploying a manufacturing execution system (MES) using AWS services.
 
 ## Project Structure

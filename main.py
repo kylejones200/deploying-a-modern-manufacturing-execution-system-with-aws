@@ -50,7 +50,7 @@ def main():
     else:
         raise ValueError("No data source specified")
     
-        metrics = calculate_production_metrics(df, config['data']['production_column'])
+    metrics = calculate_production_metrics(df, config['data']['production_column'])
     logging.info("\nProduction Metrics:")
     logging.info(f"Total Production: {metrics['total_production']:.2f}")
     logging.info(f"Mean Production: {metrics['mean_production']:.2f}")
