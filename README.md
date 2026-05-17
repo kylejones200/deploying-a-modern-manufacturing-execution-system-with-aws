@@ -43,3 +43,11 @@ Common AWS services for MES:
 - By default, generates synthetic production data.
 - Full AWS deployment requires AWS credentials and infrastructure setup.
 - Production deployment requires additional security and monitoring.
+
+## Disclaimer
+
+Educational/demo code only. Not financial, safety, or engineering advice. Use at your own risk. Verify results independently before any production or operational use.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
