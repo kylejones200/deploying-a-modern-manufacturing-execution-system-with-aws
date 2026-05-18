@@ -18,7 +18,7 @@ logging.basicConfig(
 )
 
 
-def load_config(config_path: Path = None) -> dict:
+def load_config(config_path: Path | None = None) -> dict:
     """Load configuration from YAML file."""
     if config_path is None:
         config_path = Path(__file__).parent / "config.yaml"
@@ -39,7 +39,6 @@ def main():
         "--output-dir", type=Path, default=None, help="Output directory"
     )
     args = parser.parse_args()
-
     config = load_config(args.config)
     output_dir = (
         Path(args.output_dir)
@@ -47,7 +46,6 @@ def main():
         else Path(config["output"]["figures_dir"])
     )
     output_dir.mkdir(exist_ok=True)
-
     if args.data_path and args.data_path.exists():
         df = pd.read_csv(args.data_path)
         df = analyze_manufacturing_data(
@@ -81,7 +79,6 @@ def main():
     logging.info(f"Total Production: {metrics['total_production']:.2f}")
     logging.info(f"Mean Production: {metrics['mean_production']:.2f}")
     logging.info(f"Efficiency: {metrics['efficiency']:.2%}")
-
     logging.info(f"\nAWS Services: {', '.join(config['aws']['services'])}")
     plot_production_trend(
         df,
@@ -89,7 +86,6 @@ def main():
         "Manufacturing Production Trend",
         output_dir / "production_trend.png",
     )
-
     logging.info(f"\nAnalysis complete. Figures saved to {output_dir}")
 
 

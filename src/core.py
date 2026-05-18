@@ -1,13 +1,9 @@
 """Core functions for deploying manufacturing execution system with AWS."""
 
-import logging
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import pandas as pd
-
-# Configure logging
-logging.basicConfig(level=logging.INFO, format="%(message)s")
 
 
 def analyze_manufacturing_data(
@@ -42,10 +38,8 @@ def plot_production_trend(
     """Plot production trend"""
     if plot:
         fig, ax = plt.subplots(figsize=(10, 6))
-
         ax.plot(df.index, df[production_col], color="#4A90A4", linewidth=1.2)
         ax.set_xlabel("Time")
         ax.set_ylabel("Production")
-
         plt.savefig(output_path, dpi=100, bbox_inches="tight")
         plt.close()
