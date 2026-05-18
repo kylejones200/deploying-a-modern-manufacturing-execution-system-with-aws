@@ -6,6 +6,14 @@ Medium: [https://medium.com/@kyle-t-jones/deploying-a-modern-manufacturing-execu
 
 This project demonstrates deploying a manufacturing execution system (MES) using AWS services.
 
+## Business context
+
+Modern manufacturing requires visibility. The ability to understand what's happening on the line --- in real time, across shifts, sites, and systems --- and use that insight to drive efficiency, reduce waste, and respond before problems escalate. That's the promise of a modern Manufacturing Execution System (MES).
+
+This article walks through how to build a cloud-integrated MES architecture using AWS. You'll learn how to connect equipment and legacy systems, unify streaming and batch data, layer in analytics and AI, and ensure reliability across the edge and cloud.
+
+Most facilities already have critical operational data sitting in MS SQL databases --- tracking production orders, batch records, quality checks, and downtime logs. AWS DataSync can be used for structured, high-volume transfers from primary MES databases (MS SQL 1). AWS Database Migration Service (DMS) handles continuous replication from older, high-latency legacy systems (MS SQL 2).
+
 ## Project Structure
 
 ```
